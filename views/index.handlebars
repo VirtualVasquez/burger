@@ -1,35 +1,30 @@
+<img src="/assets/img/burger.png" id="burgerImage" height="300" width="400">
 <h1>Eat-Da-Burger!</h1>
 
+<!--Burgers that can be devoured-->
 <ul>
   {{#each burgers}}
-    {{#unless this.devoured}}
+    {{#unless devoured}}
+      {{>burgers/burger-block devoured=false }}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
-
+<!--Burgers that have been devoured-->
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> layouts/main devoured=false}}
+      {{> burger/burger-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
 
-<h2>Eat Da </h2>
+
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="bu" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
+  <button type="submit">Submit</button>
 </form>
