@@ -8,16 +8,13 @@
     <div class="col-md-6">  
       <ul>
         {{#each burgers}}
-          {{#unless this.devoured}}
-            <li>
-              {{this.burger_name}}
-
-              <form action="/burgers/update/{{this.id}}?_method=PUT" method="POST">
+          {{#unless devoured}}
+              {{!-- {{this.burger_name}} --}}
+            {{> burgers/burger-block devoured=true}}
+{{!--               <form action="/burgers/update/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
                 <button type="submit">Devour it!</button>
-              </form>
-
-            </li>
+              </form> --}}
           {{/unless}}
         {{/each}}
       </ul>
@@ -27,7 +24,7 @@
       <ul>
         {{#each burgers}}
           {{#if this.devoured}}
-            {{> burger/burger-block devoured=false}}
+            {{> burgers/burger-block devoured=false}}
           {{/if}}
         {{/each}}
       </ul>
@@ -35,13 +32,13 @@
   </div>
 
   <div class="row">
-  <form class="create-update-form" {{!-- action="/api/burgers" --}} method="POST">
+  <form class="create-form" {{!-- action="/api/burgers" --}} method="POST">
 
     <div class="form-group">
-      <input class="form-control input-lg" type="text" id="bu" name="name">
+      <input type="text" id="bu" name="name">
     </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit">Add Burger</button>
   </form>
   </div>
 
