@@ -6,7 +6,7 @@
   <div class="row">
     <!--Burgers that can be devoured-->
     <div class="col-md-6">  
-      <ul>
+      <ul class="list-group">
         {{#each burgers}}
           {{#unless devoured}}
               {{!-- {{this.burger_name}} --}}
@@ -21,7 +21,7 @@
     </div>  
       <!--Burgers that have been devoured-->
     <div class="col-md-6">  
-      <ul>
+      <ul class="list-group">
         {{#each burgers}}
           {{#if this.devoured}}
             {{> burgers/burger-block devoured=false}}
