@@ -10,7 +10,7 @@ Due to the implementation of Node.js, Express, and MySQL database, the website i
 
 ## Purpose
 
-The purpose of this project was to integrate the use of a database and express-handlebars.js alongside Express and Node.js. The incorporation of a database makes it possible for the the app to save the actions of multiple users after they've left page and store information that may hold relevance, interest, or importance to those on the back-end. 
+The purpose of this project was to integrate the use of a database and express-handlebars.js alongside Express and Node.js, essentially becoming a MySQL Full Stack application. The incorporation of a database makes it possible for the the app to save the actions of multiple users after they've left page and store information that may hold relevance, interest, or importance to those on the back-end. 
 
 The value of using Express-Handlebars is that it allows the creation of webpages that are dynamic and can better coordinate with a database, thus allowing an application to be created with less redudant and manually created code, as well as having the capacity to be scaled and modified as necessary without too much difficulty.
 
