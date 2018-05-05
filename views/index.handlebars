@@ -9,12 +9,7 @@
       <ul class="list-group">
         {{#each burgers}}
           {{#unless devoured}}
-              {{!-- {{this.burger_name}} --}}
             {{> burgers/burger-block devoured=true}}
-{{!--               <form action="/burgers/update/{{this.id}}?_method=PUT" method="POST">
-                <input type="hidden" name="devoured" value="true">
-                <button type="submit">Devour it!</button>
-              </form> --}}
           {{/unless}}
         {{/each}}
       </ul>
@@ -32,7 +27,7 @@
   </div>
 
   <div class="row">
-  <form class="create-form" {{!-- action="/api/burgers" --}} method="POST">
+  <form class="create-form" method="POST">
 
     <div class="form-group">
       <input type="text" id="bu" name="name">

@@ -14,13 +14,6 @@ mysql.createConnection({
   password: "root",
   database: "burgers_db"
 });
-// mysql.createConnection({
-//   port: 3306,
-//   host: "ocvwlym0zv3tcn68.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-//   user: "hjl47kl192nyafhp",
-//   password: "root",
-//   database: "burgers_db"
-// });
 };
 
 // Make connection.
